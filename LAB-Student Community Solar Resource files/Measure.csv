@@ -1,0 +1,8 @@
+Group,Name,Expression,Format
+Measure,Billed Amount,SUM ( Sales[Billed Amount] ),"$#,0.00"
+Measure,Billed Amount/Bill,"DIVIDE ( [Billed Amount], [Bills Issued] )","$#,0.00"
+Measure,Bills Issued,COUNTROWS ( Sales ),"#,0"
+Measure,Blank,"""            """,
+Measure,Net KwH,SUM(Sales[Net KwH]),"#,0.00"
+Measure,Net KwH/Bill,"DIVIDE([Net KwH],[Bills Issued])","#,0.00"
+Measure,Selected Measure,MIN ( 'Select Measure'[Select Measure Order] ),"#,0.00"
